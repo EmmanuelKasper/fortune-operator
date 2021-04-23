@@ -23,5 +23,11 @@ kube-deploy:
 clean-kube:
 	kubectl delete deployment/fortune-deploy
 
+helm-install:
+	helm install beta ./fortune
+
+helm-uninstall:
+	helm uninstall beta
+
 help:
 	@echo target availables: image run registry kube-deploy
