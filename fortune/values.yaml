@@ -5,10 +5,13 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: quay.io/manue/fortune
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
+containerPort: 8080
+readinessProbe: /healthy
+readinessProbe: /healthy
 
 imagePullSecrets: []
 nameOverride: ""
