@@ -24,7 +24,9 @@ clean-kube:
 	kubectl delete deployment/fortune-deploy
 
 helm-install:
+	sed -i s/VERSION_PLACEHOLDER/$(VERSION)/ fortune/Chart.yaml
 	helm install beta ./fortune
+	sed -i s/$(VERSION)/VERSION_PLACEHOLDER/ fortune/Chart.yaml
 
 helm-uninstall:
 	helm uninstall beta
