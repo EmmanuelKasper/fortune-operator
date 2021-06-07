@@ -27,6 +27,6 @@ spec:
             port: 8080
           initialDelaySeconds: 3
           periodSeconds: 5
-        image: quay.io/manue/fortune:3
+        image: quay.io/rhn_support_ekasprzy/fortune:3
         ports:
         - containerPort: 8080

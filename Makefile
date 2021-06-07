@@ -13,9 +13,9 @@ clean:
 	-podman rmi localhost/fortune:$(VERSION)
 
 registry:
-	podman tag localhost/fortune:$(VERSION) quay.io/manue/fortune:$(VERSION)
+	podman tag localhost/fortune:$(VERSION) quay.io/rhn_support_ekasprzy/fortune:$(VERSION)
 	podman login quay.io
-	podman push quay.io/manue/fortune:$(VERSION)
+	podman push quay.io/rhn_support_ekasprzy/fortune:$(VERSION)
 
 kube-deploy:
 	kubectl apply -f fortune-deployment.yaml
